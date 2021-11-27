@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--        构造注入-->
+    <bean id="student03" class="com.example.gl20210926.ba03.Student">
+        <constructor-arg name="name" value="高立"/>
+        <constructor-arg name="age" value="21"/>
+        <constructor-arg name="school" ref="myschool03"/>
+    </bean>
+
+    <bean id="myschool03" class="com.example.gl20210926.ba03.School">
+        <property name="name" value="中北大学"/>
+        <property name="address" value="太原的小店区"/>
+    </bean>
+
+    <bean id="student03.1" class="com.example.gl20210926.ba03.Student">
+        <constructor-arg index="0" value="张三"/>
+        <constructor-arg index="1" value="26"/>
+        <constructor-arg index="2" ref="myschool03"/>
+    </bean>
+
+    <bean id="student03.2" class="com.example.gl20210926.ba03.Student">
+        <constructor-arg value="李四"/>
+        <constructor-arg value="23"/>
+        <constructor-arg ref="myschool03"/>
+    </bean>
+
+<!--    set注入-->
+    <bean id="student01" class="com.example.gl20210926.ba01.Student">
+        <property name="name" value="高立"/>
+        <property name="age" value="21"/>
+    </bean>
+
+    <bean id="student02" class="com.example.gl20210926.ba02.Student">
+        <property name="name" value="高立"/>
+        <property name="age" value="21"/>
+        <property name="school" ref="myschool02"/>
+    </bean>
+    <bean id="mydate" class="java.util.Date">
+        <property name="time" value="9324732947932"/>
+
+    </bean>
+    <bean id="myschool02" class="com.example.gl20210926.ba02.School">
+        <property name="name" value="中北大学"/>
+        <property name="address" value="太原的小店区"/>
+    </bean>
+
+</beans>

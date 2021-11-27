@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.southwind.mapper.AccountMapper">
+
+    <insert id="save" parameterType="com.southwind.entity.Account">
+        insert into t_account(username,password,age) values(#{username},#{password},#{age})
+    </insert>
+
+<!--&lt;!&ndash;    insert添加操作&ndash;&gt;-->
+<!--    <insert id=""></insert>-->
+<!--&lt;!&ndash;    update修改操作&ndash;&gt;-->
+<!--    <update id=""></update>-->
+<!--&lt;!&ndash;    delete删除操作&ndash;&gt;-->
+<!--    <delete id=""></delete>-->
+<!--&lt;!&ndash;    select查询操作&ndash;&gt;-->
+<!--    <select id=""></select>-->
+
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="someService" class="com.example.gl20210925.impl.SomeServiceImpl"/>
+
+<!--    spring创建一个非自定义对象-->
+    <bean id="mydate" class="java.util.Date"/>
+    <bean id="otherService" class="com.example.gl20210925.OtherService"/>
+    <bean id="service" class="com.example.gl20210925.impl.SomeServiceImpl">
+        <constructor-arg name="name" value="张三"/>
+        <constructor-arg name="age" value="28"/>
+    </bean>
+
+
+</beans>
